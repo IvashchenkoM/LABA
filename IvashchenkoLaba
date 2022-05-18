@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+int fact(int n);
+
+
+int iter(int n)
+
+{
+	int k = 0,l=0;
+	if (n % 2 != 0)
+		k--;
+		
+	while (n > 1) {
+		for (int i = 1; i <=n; i++)
+			if (i % 2 == 0) {
+				l++;
+			}
+		n = n -l;
+		k++;
+		l = 0;
+	}
+	
+ return k;
+}
+
+int main()
+{
+	
+		int a;
+		cout << "Enter number:" << endl;
+		
+		cin >> a;
+		cout << "Nomer poslednego 4eloveka" << endl;
+		cout << fact(a) << endl;
+		cout << "koli4estvo povtoriv procedyru" << endl;
+		cout << iter(a) << endl;
+	
+	return 0;
+}
+
+	int fact(int n)
+	{
+		
+		
+		int f,i=0;
+		if (n == 1) {
+		
+			return 1;
+
+		}
+		else if (n % 2 == 0) {
+			
+			return (2 * fact(n / 2) - 1);
+
+		}
+		else if (n % 2 != 0)
+			
+		{
+	
+			return (2 * fact(n / 2) + 1);
+			
+		}
+		
+	
+}
